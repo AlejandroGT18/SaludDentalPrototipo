@@ -1,0 +1,44 @@
+:root {
+    --cel: 480px;
+    --tab: 768px;
+    --esc: 992px;
+}
+html {
+    /* font-size: 62.5%; 1REM = 10pX */
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Noto Serif", serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-family: "Noto Serif", serif;
+    font-weight: 700;
+}
+
+/* HEADER */
+@media (max-width: 390px) {
+    #logo-princiapal2 {
+        width: 200px;
+    }
+}
+
+#navegacion-oculta a {
+    color: #5a189a;
+    font-weight: 700;
+}
+#navegacion-oculta a:hover {
+    color: #3e8914;
+}
+
+#navegacion-oculta button {
+    width: 70%;
+}
+@media (min-width: 400px) {
+    #navegacion-oculta button {
+        width: 50%;
+    }
+}
