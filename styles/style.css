@@ -8,6 +8,10 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+}
+
 a {
     text-decoration: none;
     font-family: "Noto Serif", serif;
@@ -20,6 +24,11 @@ h1 {
 }
 
 /* HEADER */
+#header__enlacesContenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 @media (max-width: 390px) {
     #logo-princiapal2 {
         width: 200px;

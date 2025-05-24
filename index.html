@@ -15,26 +15,33 @@
 </head>
 <body>
     <header class="header">
-        <section class="pt-3">
-            <article class="header__logo d-flex justify-content-center">
-                <img src="./assets/img/logo.jpg" alt="Logo de la Empresa" width="250">
+        <!-- Seccion de la Parte Superio del Header (logo cuenta y logo) -->
+        <section class="pt-3 px-3">
+            <article class="text-end" id="icono-cuenta"> <!--Icono de Cuenta Superior Izquierda-->
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                </svg>
+            </article>
+            <article class="header__logo d-flex justify-content-center"> <!--Img del Logo1 de la Empresa-->
+                <img src="./assets/img/logo.png" alt="Logo de la Empresa" width="250">
             </article>
         </section>
-        <section class="container border-2 border-top border-bottom">
+
+        <!-- Seccion de la "navegacion" (navegacion oculta, carrito, buscador) -->
+        <section id="header__enlacesContenedor" class="container border-2 border-top border-bottom py-2">
             <article class="header__navegacionOculta">
                 <a href="#navegacionOculta-contenedor" data-bs-toggle="offcanvas">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-bricks text-dark" viewBox="0 0 16 16">
-                        <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5zM3 4v2h4.5V4zm5.5 0v2H13V4zM3 10v2h4.5v-2zm5.5 0v2H13v-2zM1 1v2h3.5V1zm4.5 0v2h5V1zm6 0v2H15V1zM1 7v2h3.5V7zm4.5 0v2h5V7zm6 0v2H15V7zM1 13v2h3.5v-2zm4.5 0v2h5v-2zm6 0v2H15v-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-text-left text-dark" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
                     </svg>
                 </a>
-                <!-- data-bs-scroll="true" -->
                 <div class="offcanvas offcanvas-start w-75" id="navegacionOculta-contenedor">
                     <div class="offcanvas-header d-flex justify-content-between align-items-start">
                         <img src="./assets/img/logo2.png" id="logo-princiapal2" alt="Logo de la empresa" width="250">
                         <button class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body bg-info border-4 border-top">
-                        <!-- <h1 id="titulo-oculto">SALUD DENTAL</h1> -->
                         <nav class="d-flex flex-column gap-3 mt-3" id="navegacion-oculta">
                             <a href="./index.html">INICIO</a>
                             <a href="./pages/productos.html">PRODUCTOS</a>
@@ -51,22 +58,26 @@
                     </div>
                 </div>
             </article>
-        </section>
-        <!-- <nav class="navbar navbar-expand-lg navegacion">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav navegacion__links">
-                    <a href="./index.html" class="nav-link">Inicio</a>
-                    <a href="./pages/productos.html" class="nav-link">Productos</a>
-                    <a href="./pages/nosotros.html" class="nav-link">Nosotros</a>
-                    <a href="./pages/contacto.html" class="nav-link">Contacto</a>
+            <article class="header__iconos d-flex justify-content-around justify-content-sm-around align-items-center">
+                <div id="icono-buscador">
+                    <a href="#buscador-oculto" data-bs-toggle="collapse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search text-dark" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg> -->
+                    </a>
                 </div>
-            </div>
-        </nav> -->
-    </header>
+                <div id="icono-carrito">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cart3" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </div>
+            </article>
+        </section>
 
+    </header>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
