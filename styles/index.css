@@ -1,0 +1,23 @@
+/* main */
+@media (min-width: 768px) {
+    .mainPrincipal {
+        height: 75vh;
+    }
+}
+
+@media (min-width: 991px) {
+    #contenedor-logo img {
+        width: 400px;
+    }
+}
+
+/* footer */
+.footer {
+    /* background-color: ; */
+    gap: .5rem;
+}
+@media (min-width: 576px) {
+    .footer {
+        gap: 0;
+    }
+}
